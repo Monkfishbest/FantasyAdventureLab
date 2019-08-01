@@ -32,6 +32,7 @@ public class SpellCaster extends Character {
     }
 
     public void attack(IAttack enemy){
-
+        int dmg = spell.getDamage();
+        enemy.reduceHP(dmg);
     }
 }
