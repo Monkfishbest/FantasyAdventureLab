@@ -1,12 +1,14 @@
 package Characters;
 
+import Enums.Weapons;
+
 public abstract class Character {
     private String name;
     private int HealthPoints;
-    private String weapon;
+    protected Weapons weapon;
     private int inventory;
 
-    public Character(String name, int healthPoints, String weapon) {
+    public Character(String name, int healthPoints, Weapons weapon) {
         this.name = name;
         HealthPoints = healthPoints;
         this.weapon = weapon;
