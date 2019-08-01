@@ -10,7 +10,7 @@ public class Knight extends Fighter  {
         super(name, 100, weapon);
     }
 
-    public void attack(Enemies enemy){
+    public void attack(IAttack enemy){
         int dmg = weapon.getDamage();
         enemy.reduceHP(dmg);
     }

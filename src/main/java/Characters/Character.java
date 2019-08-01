@@ -1,8 +1,9 @@
 package Characters;
 
 import Enums.Weapon;
+import interfaces.IAttack;
 
-public abstract class Character {
+public abstract class Character implements IAttack {
     private String name;
     private int healthPoints;
     protected Weapon weapon;
@@ -19,7 +20,7 @@ public abstract class Character {
         return healthPoints;
     }
 
-    protected void reduceHealthPoints(int damage) {
+    public void reduceHP(int damage) {
         this.healthPoints -= damage;
     }
 
@@ -34,4 +35,6 @@ public abstract class Character {
     public int getInventory() {
         return inventory;
     }
+
+
 }

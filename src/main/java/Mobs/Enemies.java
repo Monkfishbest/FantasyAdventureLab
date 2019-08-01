@@ -1,8 +1,9 @@
 package Mobs;
 
 import Enums.Enemy;
+import interfaces.IAttack;
 
-public class Enemies {
+public class Enemies implements IAttack {
 
     private int HP;
     private int attackDMG;
@@ -30,5 +31,8 @@ public class Enemies {
         this.HP -= dmgTaken;
     }
 
-
+    public void attack(IAttack hero){
+       int dmg = this.attackDMG;
+       hero.reduceHP(dmg);
+    }
 }

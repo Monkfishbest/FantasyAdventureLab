@@ -1,5 +1,6 @@
 package Characters;
 
+import Enums.Enemy;
 import Enums.Weapon;
 import Mobs.Enemies;
 import org.junit.Before;
@@ -15,12 +16,12 @@ public class DwarfTest {
     @Before
     public void setUP(){
         dwarf = new DwarfFighter("Olfa", Weapon.BROADSWORD);
-        orge = new Enemies(50, 13, "NellDale Orge");
+        orge = new Enemies(Enemy.Ogre);
     }
     @Test
     public void canAttack(){
         dwarf.attack(orge);
-        assertEquals(40, orge.getHP());
+        assertEquals(20, orge.getHP());
     }
 
 }
