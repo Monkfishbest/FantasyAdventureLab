@@ -13,6 +13,14 @@ public class SpellCaster extends Character {
         this.summon = summon;
     }
 
+    public Spell getSpell() {
+        return spell;
+    }
+
+    public String getSummon() {
+        return summon;
+    }
+
     public void changeSpell(Spell spell) {
         this.spell = spell;
     }
