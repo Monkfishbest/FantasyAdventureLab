@@ -15,7 +15,7 @@ public class DwarfTest {
     @Before
     public void setUP(){
         dwarf = new DwarfFighter("Olfa", Weapon.BROADSWORD);
-        orge = new Enemies(50, 13, "NellDale Orge");
+        orge = new Enemies(EN);
     }
     @Test
     public void canAttack(){
