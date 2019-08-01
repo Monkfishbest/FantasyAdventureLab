@@ -1,13 +1,13 @@
 package Enums;
 
-public enum SPELLS {
+public enum Spell {
     FIREBALL(7),
     LIGHTNINGBOLT(8),
     FIREBOLT(3);
 
     private final int damage;
 
-    SPELLS(int damage) {
+    Spell(int damage) {
         this.damage = damage;
     }
 }
