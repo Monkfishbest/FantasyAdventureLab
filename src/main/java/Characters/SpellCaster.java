@@ -2,12 +2,13 @@ package Characters;
 
 import Enums.Spell;
 import Enums.Weapon;
+import Mobs.Summon;
 
 public class SpellCaster extends Character {
     protected Spell spell;
-    private String summon;
+    private Summon summon;
 
-    public SpellCaster(String name, Weapon weapon, Spell spell, String summon) {
+    public SpellCaster(String name, Weapon weapon, Spell spell, Summon summon) {
         super(name, 50, weapon);
         this.spell = spell;
         this.summon = summon;
@@ -17,7 +18,7 @@ public class SpellCaster extends Character {
         return spell;
     }
 
-    public String getSummon() {
+    public Summon getSummon() {
         return summon;
     }
 
@@ -25,7 +26,7 @@ public class SpellCaster extends Character {
         this.spell = spell;
     }
 
-    public void changeSummon(String summon){
+    public void changeSummon(Summon summon){
         this.summon = summon;
     }
 }
