@@ -1,4 +1,7 @@
+package Characters;
+
 import Characters.Barbarian;
+import Enums.Enemy;
 import Enums.Weapon;
 import Mobs.Enemies;
 import org.junit.Before;
@@ -14,11 +17,11 @@ public class BarbarianTest {
     @Before
     public void setUP(){
         barb = new Barbarian("Olaf", 105, Weapon.BROADSWORD);
-        orc = new Enemies(60, 30, "Black pit orc");
+        orc = new Enemies(Enemy.DRAGON);
     }
     @Test
     public void canAttack(){
         barb.attack(orc);
-        assertEquals(45,orc.getHP() );
+        assertEquals(85,orc.getHP() );
     }
 }
