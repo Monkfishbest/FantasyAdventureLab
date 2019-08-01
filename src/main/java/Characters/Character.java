@@ -26,7 +26,10 @@ public abstract class Character implements IAttack {
     }
 
     public void reduceHP(int damage) {
-        this.healthPoints -= damage;
+        int totalDMG =  damage - this.armor;
+        if(totalDMG > 0 ) {
+            this.healthPoints -= totalDMG;
+        }
     }
 
     protected void increaseHealthPoints(int healing) {
