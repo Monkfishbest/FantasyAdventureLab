@@ -27,5 +27,6 @@ public class Enemies {
     public void reduceHP(int dmgTaken){
         this.HP -= dmgTaken;
     }
+    
 
 }
