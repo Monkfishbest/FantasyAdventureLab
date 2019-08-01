@@ -10,7 +10,7 @@ public abstract class Character {
 
     public Character(String name, int healthPoints, Weapon weapon) {
         this.name = name;
-        healthPoints = healthPoints;
+        this.healthPoints = healthPoints;
         this.weapon = weapon;
         this.inventory = 0;
     }
@@ -19,11 +19,11 @@ public abstract class Character {
         return healthPoints;
     }
 
-    public void reduceHealthPoints(int damage) {
+    protected void reduceHealthPoints(int damage) {
         this.healthPoints -= damage;
     }
 
-    public void increaseHealthPoints(int healing) {
+    protected void increaseHealthPoints(int healing) {
         this.healthPoints += healing;
     }
 }
