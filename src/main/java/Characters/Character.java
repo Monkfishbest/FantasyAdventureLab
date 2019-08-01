@@ -19,11 +19,11 @@ public abstract class Character {
         return healthPoints;
     }
 
-    public void reduceHealthPoints(int damage) {
+    protected void reduceHealthPoints(int damage) {
         this.healthPoints -= damage;
     }
 
-    public void increaseHealthPoints(int healing) {
+    protected void increaseHealthPoints(int healing) {
         this.healthPoints += healing;
     }
 }
