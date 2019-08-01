@@ -14,4 +14,8 @@ public abstract class Character {
         this.weapon = weapon;
         this.inventory = 0;
     }
+
+    public int getHealthPoints() {
+        return HealthPoints;
+    }
 }
