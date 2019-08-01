@@ -10,7 +10,7 @@ public abstract class Character {
 
     public Character(String name, int healthPoints, Weapon weapon) {
         this.name = name;
-        healthPoints = healthPoints;
+        this.healthPoints = healthPoints;
         this.weapon = weapon;
         this.inventory = 0;
     }

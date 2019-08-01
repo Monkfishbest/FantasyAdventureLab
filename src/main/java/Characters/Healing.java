@@ -1,9 +1,9 @@
 package Characters;
 
 public enum Healing {
-    POTIONOFHEALING(5),
-    HEALINGWORD(2),
-    HEALINGHERB(8);
+    POTIONOFHEALING(8),
+    HEALINGWORD(5),
+    HEALINGHERB(2);
 
     private final int healing;
 
