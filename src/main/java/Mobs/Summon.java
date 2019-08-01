@@ -1,8 +1,10 @@
 package Mobs;
 
+import Enums.Enemy;
+
 public class Summon extends Enemies {
 
-    public Summon(int HP, int attackDMG, String type) {
-        super(HP, attackDMG, type);
+    public Summon(Enemy enemy) {
+        super(enemy);
     }
 }

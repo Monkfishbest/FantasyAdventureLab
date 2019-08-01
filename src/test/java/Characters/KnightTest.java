@@ -1,5 +1,6 @@
 package Characters;
 
+import Enums.Enemy;
 import Enums.Weapon;
 import Mobs.Enemies;
 import org.junit.Before;
@@ -16,12 +17,12 @@ public class KnightTest {
     @Before
     public void setUP(){
         knight = new Knight("Dave", Weapon.BROADSWORD);
-        rat = new Enemies(20,2,"Rat");
+        rat = new Enemies(Enemy.RAT);
     }
     @Test
     public void canAttack(){
         knight.attack(rat);
-        assertEquals(15,rat.getHP());
+        assertEquals(-4,rat.getHP());
     }
 
 }

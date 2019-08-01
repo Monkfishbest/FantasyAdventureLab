@@ -1,5 +1,6 @@
 package Characters;
 
+import Enums.Enemy;
 import Enums.Spell;
 import Enums.Weapon;
 import Mobs.Summon;
@@ -14,7 +15,7 @@ public class SpellCasterTest {
 
     @Before
     public void setUp() {
-        ogre = new Summon(12, 5, "Ogre");
+        ogre = new Summon(Enemy.Ogre);
         spellCaster = new SpellCaster("Bob", Weapon.QUARTERSTAFF, Spell.FIREBALL, ogre);
     }
 
@@ -36,7 +37,7 @@ public class SpellCasterTest {
 
     @Test
     public void canChangeSummon() {
-        Summon orc = new Summon(4, 1, "Orc");
+        Summon orc = new Summon(Enemy.ORC);
         spellCaster.changeSummon(orc);
         assertEquals(orc, spellCaster.getSummon());
     }

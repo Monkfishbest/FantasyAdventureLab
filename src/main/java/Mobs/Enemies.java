@@ -1,15 +1,17 @@
 package Mobs;
 
+import Enums.Enemy;
+
 public class Enemies {
 
     private int HP;
     private int attackDMG;
-    private String type;
+    private Enemy type;
 
-    public Enemies(int HP, int attackDMG, String type) {
-        this.HP = HP;
-        this.attackDMG = attackDMG;
-        this.type = type;
+    public Enemies(Enemy enemy) {
+        this.HP = enemy.getHP();
+        this.attackDMG = enemy.getAttack();
+        this.type = enemy;
     }
 
     public int getHP() {
@@ -20,7 +22,7 @@ public class Enemies {
         return this.attackDMG;
     }
 
-    public String getType() {
+    public Enemy getType() {
         return this.type;
     }
 
