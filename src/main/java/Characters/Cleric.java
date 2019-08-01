@@ -1,6 +1,7 @@
 package Characters;
 
 import Enums.Weapon;
+import interfaces.IAttack;
 
 public class Cleric extends Character{
     private Healing healing;
@@ -20,5 +21,10 @@ public class Cleric extends Character{
 
     public void healOther(Character character) {
         character.increaseHealthPoints(healing.getHealing());
+    }
+
+    public void attack(IAttack enemy){
+            int dmg = weapon.getDamage();
+            enemy.reduceHP(dmg);
     }
 }

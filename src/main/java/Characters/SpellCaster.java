@@ -3,6 +3,7 @@ package Characters;
 import Enums.Spell;
 import Enums.Weapon;
 import Mobs.Summon;
+import interfaces.IAttack;
 
 public class SpellCaster extends Character {
     protected Spell spell;
@@ -28,5 +29,9 @@ public class SpellCaster extends Character {
 
     public void changeSummon(Summon summon){
         this.summon = summon;
+    }
+
+    public void attack(IAttack enemy){
+
     }
 }
