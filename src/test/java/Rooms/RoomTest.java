@@ -16,4 +16,9 @@ public class RoomTest {
     public void getEnemies() {
         System.out.println(room.getEnemies());
     }
+
+    @Test
+    public void getLoot() {
+        System.out.println(room.getLoot());
+    }
 }
