@@ -6,8 +6,8 @@ import interfaces.IAttack;
 
 public class DwarfFighter extends Character implements IAttack {
 
-    public DwarfFighter(String name, Weapon weapon) {
-        super(name, 75, weapon);
+    public DwarfFighter(String name, Weapon weapon,int armor) {
+        super(name, 75, weapon, armor);
     }
 
     public void attack(IAttack enemy){

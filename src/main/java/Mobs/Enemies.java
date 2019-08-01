@@ -5,6 +5,7 @@ import interfaces.IAttack;
 
 public class Enemies implements IAttack {
 
+    private int armor;
     private int HP;
     private int attackDMG;
     private Enemy type;
@@ -13,6 +14,8 @@ public class Enemies implements IAttack {
         this.HP = enemy.getHP();
         this.attackDMG = enemy.getAttack();
         this.type = enemy;
+        this.armor = enemy.getArmor();
+
     }
 
     public int getHP() {
@@ -27,12 +30,15 @@ public class Enemies implements IAttack {
         return this.type;
     }
 
-    public void reduceHP(int dmgTaken){
-        this.HP -= dmgTaken;
+    public void reduceHP(int damage) {
+        int totalDMG = damage - this.armor;
+        if (totalDMG > 0) {
+            this.HP -= totalDMG;
+        }
     }
 
     public void attack(IAttack hero){
-       int dmg = this.attackDMG;
-       hero.reduceHP(dmg);
-    }
+        int dmg = this.attackDMG;
+        hero.reduceHP(dmg);
+        }
 }

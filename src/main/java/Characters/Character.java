@@ -5,15 +5,20 @@ import interfaces.IAttack;
 
 public abstract class Character implements IAttack {
     private String name;
-    private int healthPoints;
+    private int healthPoints, armor;
     protected Weapon weapon;
     private int inventory;
 
-    public Character(String name, int healthPoints, Weapon weapon) {
+    public Character(String name, int healthPoints, Weapon weapon, int armor) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.weapon = weapon;
         this.inventory = 0;
+        this.armor = armor;
+    }
+
+    public int getArmor() {
+        return this.armor;
     }
 
     public int getHealthPoints() {
@@ -21,7 +26,10 @@ public abstract class Character implements IAttack {
     }
 
     public void reduceHP(int damage) {
-        this.healthPoints -= damage;
+        int totalDMG =  damage - this.armor;
+        if(totalDMG > 0 ) {
+            this.healthPoints -= totalDMG;
+        }
     }
 
     protected void increaseHealthPoints(int healing) {

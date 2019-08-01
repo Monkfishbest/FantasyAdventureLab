@@ -5,8 +5,8 @@ import interfaces.IAttack;
 
 public abstract class Fighter extends Character  {
 
-    public Fighter(String name, int healthPoints, Weapon weapon) {
-        super(name, healthPoints, weapon);
+    public Fighter(String name, int healthPoints, Weapon weapon, int armor) {
+        super(name, healthPoints, weapon, armor);
 
     }
 

@@ -1,5 +1,6 @@
 package Characters;
 
+import Enums.Healing;
 import Enums.Weapon;
 import org.junit.Before;
 import org.junit.Test;
