@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 
 public class ClericTest {
     private Cleric cleric;
+
     @Before
     public void setUp() {
         cleric = new Cleric("James", Weapon.SHORTSWORD, Healing.HEALINGWORD, 2);
@@ -33,3 +34,4 @@ public class ClericTest {
         assertEquals(102, cleric.getHealthPoints());
     }
 }
+

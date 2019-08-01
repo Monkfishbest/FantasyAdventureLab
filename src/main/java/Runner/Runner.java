@@ -1,9 +1,7 @@
 package Runner;
 
+import Characters.*;
 import Characters.Character;
-import Characters.Cleric;
-import Characters.Knight;
-import Characters.SpellCaster;
 import Enums.Enemy;
 import Enums.Healing;
 import Enums.Spell;
@@ -22,7 +20,13 @@ public class Runner {
         party.add(new SpellCaster("Zanorin", Weapon.QUARTERSTAFF, Spell.FIREBALL, new Summon(Enemy.PSEUDODRAGON)));
         party.add(new Cleric("Bob", Weapon.SHORTSWORD, Healing.HEALINGWORD, 5));
         Room room = new Room();
-    do {
+    do { for(Character partyMember: party){
+        if((partyMember instanceof Fighter) ||(partyMember instanceof SpellCaster)){
+            partyMember.attack(room.getEnemies().get(0));
+        } else { if(partyMember instanceof Cleric) {
+            partyMember.
+        }
+    }
 
     } while (room.getEnemies().size() > 0);
     }

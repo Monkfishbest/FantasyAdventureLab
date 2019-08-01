@@ -43,6 +43,6 @@ public abstract class Character implements IAttack {
     public int getInventory() {
         return inventory;
     }
-
+//    need to add a choose action that is implmented in all the sub classes, just calls attack for spell caster and fighter 
 
 }
