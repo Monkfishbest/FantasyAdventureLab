@@ -1,5 +1,9 @@
 package Enums;
 
+import Mobs.Enemies;
+
+import java.util.*;
+
 public enum Enemy {
     ORC(10, 7, 5),
     Ogre(30, 10, 3),
@@ -9,6 +13,9 @@ public enum Enemy {
     private final int HP;
     private final int attack;
     private final int amount;
+    private static final List<Enemy> VALUES =
+            Collections.unmodifiableList(Arrays.asList(values()));
+    private static final Random random = new Random();
 
     Enemy(int HP, int attack, int amount) {
         this.HP = HP;
@@ -22,5 +29,14 @@ public enum Enemy {
 
     public int getAttack() {
         return attack;
+    }
+
+    public ArrayList<Enemies> generateRandomCreatures() {
+        Enemy enemy = VALUES.get(random.nextInt(VALUES.size()));
+        ArrayList<Enemies> arr = new ArrayList<Enemies>();
+        for (int i = 0; i < enemy.amount; i++) {
+            arr.add(new Enemies(enemy));
+        }
+        return arr;
     }
 }
