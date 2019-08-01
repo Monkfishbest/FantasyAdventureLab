@@ -24,5 +24,8 @@ public class Enemies {
         return this.type;
     }
 
+    public void reduceHP(int dmgTaken){
+        this.HP -= dmgTaken;
+    }
 
 }

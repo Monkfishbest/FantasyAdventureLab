@@ -9,4 +9,8 @@ public enum Weapon {
     Weapon(int damage) {
         this.damage = damage;
     }
+
+    public int getDamage() {
+        return damage;
+    }
 }
