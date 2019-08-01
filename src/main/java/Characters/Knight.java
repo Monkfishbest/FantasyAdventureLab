@@ -6,7 +6,7 @@ import interfaces.IAttack;
 
 public class Knight extends Fighter  {
 
-    public Knight(String name,  Weapon weapon,int armor) {
+    public Knight(String name,  Weapon weapon, int armor) {
         super(name, 100, weapon, armor);
     }
 

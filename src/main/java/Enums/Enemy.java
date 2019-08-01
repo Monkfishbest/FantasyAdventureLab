@@ -8,6 +8,7 @@ public enum Enemy {
     ORC(10, 7, 5, 2),
     Ogre(30, 10, 3, 5),
     RAT(1,1, 10, 0),
+    PSEUDODRAGON(10, 0, 1, 0),
     DRAGON(100, 20, 1, 6);
 
     private final int HP;

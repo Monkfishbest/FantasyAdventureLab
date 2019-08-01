@@ -32,4 +32,8 @@ public class Room {
     public int getLoot() {
         return loot;
     }
+
+    public void removeDead(Enemies enemy) {
+        enemies.remove(enemy);
+    }
 }
