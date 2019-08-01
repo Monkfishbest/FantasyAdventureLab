@@ -1,13 +1,14 @@
 package Characters;
 
+import Enums.Healing;
 import Enums.Weapon;
 import interfaces.IAttack;
 
 public class Cleric extends Character{
     private Healing healing;
 
-    public Cleric(String name, Weapon weapon, Healing healing) {
-        super(name, 100, weapon);
+    public Cleric(String name, Weapon weapon, Healing healing, int armor) {
+        super(name, 100, weapon, armor);
         this.healing = healing;
     }
 

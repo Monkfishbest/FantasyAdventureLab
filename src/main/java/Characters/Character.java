@@ -5,15 +5,20 @@ import interfaces.IAttack;
 
 public abstract class Character implements IAttack {
     private String name;
-    private int healthPoints;
+    private int healthPoints, armor;
     protected Weapon weapon;
     private int inventory;
 
-    public Character(String name, int healthPoints, Weapon weapon) {
+    public Character(String name, int healthPoints, Weapon weapon, int armor) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.weapon = weapon;
         this.inventory = 0;
+        this.armor = armor;
+    }
+
+    public int getArmor() {
+        return this.armor;
     }
 
     public int getHealthPoints() {

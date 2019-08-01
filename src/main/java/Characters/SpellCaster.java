@@ -10,7 +10,7 @@ public class SpellCaster extends Character {
     private Summon summon;
 
     public SpellCaster(String name, Weapon weapon, Spell spell, Summon summon) {
-        super(name, 50, weapon);
+        super(name, 50, weapon, 0);
         this.spell = spell;
         this.summon = summon;
     }

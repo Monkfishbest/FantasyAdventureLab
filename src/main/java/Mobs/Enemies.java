@@ -13,6 +13,7 @@ public class Enemies implements IAttack {
         this.HP = enemy.getHP();
         this.attackDMG = enemy.getAttack();
         this.type = enemy;
+
     }
 
     public int getHP() {
