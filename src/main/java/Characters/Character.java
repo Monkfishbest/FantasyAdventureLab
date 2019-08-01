@@ -26,4 +26,12 @@ public abstract class Character {
     protected void increaseHealthPoints(int healing) {
         this.healthPoints += healing;
     }
+
+    public void addLoot(int loot) {
+        this.inventory += loot;
+    }
+
+    public int getInventory() {
+        return inventory;
+    }
 }
