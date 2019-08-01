@@ -1,15 +1,15 @@
 package Characters;
 
-import Enums.Weapons;
+import Enums.Weapon;
 
 public class Fighter extends Character {
 
-    public Fighter(String name, int healthPoints, Weapons weapon) {
+    public Fighter(String name, int healthPoints, Weapon weapon) {
         super(name, healthPoints, weapon);
 
     }
 
-    public void changeWeapon(Weapons weapon){
+    public void changeWeapon(Weapon weapon){
         this.weapon = weapon;
     }
 
