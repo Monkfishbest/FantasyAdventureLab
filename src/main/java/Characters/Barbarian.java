@@ -10,8 +10,8 @@ public class Barbarian extends Fighter {
     }
 
     public void attack(Enemies enemy){
-        int dmg = weapon.getDamage() * 2;
-        .reduceHP(dmg);
+        int dmg = weapon.getDamage() * 3;
+        enemy.reduceHP(dmg);
     }
 
 }
