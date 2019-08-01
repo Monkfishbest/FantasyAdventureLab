@@ -15,13 +15,13 @@ public class DwarfTest {
 
     @Before
     public void setUP(){
-        dwarf = new DwarfFighter("Olfa", Weapon.BROADSWORD);
+        dwarf = new DwarfFighter("Olfa", Weapon.BROADSWORD, 10);
         orge = new Enemies(Enemy.Ogre);
     }
     @Test
     public void canAttack(){
         dwarf.attack(orge);
-        assertEquals(20, orge.getHP());
+        assertEquals(25, orge.getHP());
     }
 
 }

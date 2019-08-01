@@ -16,7 +16,7 @@ public class KnightTest {
 
     @Before
     public void setUP(){
-        knight = new Knight("Dave", Weapon.BROADSWORD);
+        knight = new Knight("Dave", Weapon.BROADSWORD, 10);
         rat = new Enemies(Enemy.RAT);
     }
     @Test

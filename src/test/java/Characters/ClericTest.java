@@ -11,7 +11,7 @@ public class ClericTest {
     private Cleric cleric;
     @Before
     public void setUp() {
-        cleric = new Cleric("James", Weapon.SHORTSWORD, Healing.HEALINGWORD);
+        cleric = new Cleric("James", Weapon.SHORTSWORD, Healing.HEALINGWORD, 2);
     }
 
     @Test
@@ -28,8 +28,8 @@ public class ClericTest {
     @Test
     public void healOther() {
         cleric.reduceHP(5);
-        assertEquals(95, cleric.getHealthPoints());
+        assertEquals(97, cleric.getHealthPoints());
         cleric.healOther(cleric);
-        assertEquals(100, cleric.getHealthPoints());
+        assertEquals(102, cleric.getHealthPoints());
     }
 }

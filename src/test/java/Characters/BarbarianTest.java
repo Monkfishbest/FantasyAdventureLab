@@ -22,6 +22,6 @@ public class BarbarianTest {
     @Test
     public void canAttack(){
         barb.attack(orc);
-        assertEquals(85,orc.getHP() );
+        assertEquals(91,orc.getHP() );
     }
 }
